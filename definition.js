@@ -3,7 +3,7 @@ Blockly.Blocks['i2c_motor_driver'] = {
       this.jsonInit(
         {
             "type": "i2c_motor_driver",
-            "message0": "quay động cơ %1 tốc độ %3 %2",
+            "message0": "quay động cơ %1 tốc độ %2 %3",
             "args0": [
               {
                 "type": "field_dropdown",
@@ -50,6 +50,8 @@ Blockly.Blocks['i2c_motor_driver'] = {
     };
 
     Blockly.Python['i2c_motor_driver'] = function(block) {
+        Blockly.Python.definitions_['import_display'] = 'from yolobit import *';
+        Blockly.Python.definitions_['import_motor_driver'] = 'from i2c_motor_driver import *';
         var dropdown_motor = block.getFieldValue('motor');
         var number_speed = block.getFieldValue('speed');
         // TODO: Assemble Python into code variable.
