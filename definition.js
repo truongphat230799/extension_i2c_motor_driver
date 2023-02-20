@@ -11,19 +11,19 @@ Blockly.Blocks['i2c_motor_driver'] = {
                 "options": [
                   [
                     "1",
-                    "MD4C_REG_CH1"
+                    "0"
                   ],
                   [
                     "2",
-                    "MD4C_REG_CH2"
+                    "1"
                   ],
                   [
                     "3",
-                    "MD4C_REG_CH3"
+                    "2"
                   ],
                   [
                     "4",
-                    "MD4C_REG_CH4"
+                    "3"
                   ]
                 ]
               },
