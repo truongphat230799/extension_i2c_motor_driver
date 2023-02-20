@@ -51,7 +51,7 @@ class MotorDriver4Channel():
         else:
             dir = 1
 
-        self._write(MD4C_REG_CH1+motor, pack('HHH', dir, speed))
+        self._write(MD4C_REG_CH1+motor, pack('BB', dir, speed))
     
     def set_motors(self, speed):
         
