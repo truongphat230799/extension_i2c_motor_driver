@@ -49,9 +49,9 @@ Blockly.Blocks['i2c_motor_driver'] = {
     Blockly.Python['i2c_motor_driver'] = function(block) {
         Blockly.Python.definitions_['import_display'] = 'from yolobit import *';
         Blockly.Python.definitions_['import_motor_driver'] = 'from i2c_motor_driver import *';
-        var dropdown_motor = block.getFieldValue('motor');
-        var number_speed = block.getFieldValue('speed');
+        var motor = Blockly.Python.valueToCode(block, 'motor', Blockly.Python.ORDER_ATOMIC);
+        var speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
         // TODO: Assemble Python into code variable.
-        var code = 'set_motor(' + dropdown_motor + ','+ number_speed+ ')\n';
+        var code = 'set_motor(' + motor + ','+ speed+ ')\n';
         return code;
       };
