@@ -1,5 +1,11 @@
 <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
-  <category name="MOTOR DRIVER" colour="#cb2026" icon="wheels">
-    <block type="i2c_motor_driver"/>
+  <category name="MOTOR DRIVER" colour="#cb2026" icon="gears">
+    <block type="i2c_motor_driver">
+        <value name="speed">
+            <shadow type="math_number">
+                <field name="NUM">50</field>
+            </shadow>
+        </value>
+    </block>
   </category>
 </xml>
