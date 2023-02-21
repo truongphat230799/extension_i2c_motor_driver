@@ -66,7 +66,7 @@ Blockly.Blocks['i2c_motor_stop'] = {
         "message0": "dừng di chuyển",
         "previousStatement": null,
         "nextStatement": null,
-        "colour": 230,
+        "colour": "#cb2026",
         "tooltip": "",
         "helpUrl": ""
       }
