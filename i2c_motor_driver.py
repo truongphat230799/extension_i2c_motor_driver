@@ -37,7 +37,7 @@ class MotorDriver4Channel():
 
 ######## MOTOR CONTROL ##################################
 
-    def set_motor(self, motor, speed):
+    def set_motor(self, motor, speed, time =None):
         if motor not in (0, 1, 2, 3):
             raise RuntimeError('Invalid motor number')
         
@@ -52,6 +52,9 @@ class MotorDriver4Channel():
             dir = 1
 
         self._write(MD4C_REG_CH1+motor, pack('BB', dir, speed))
+        if time != None:
+            time.sleep(t)
+            self.set_motors(motor,0)
     
     def set_motors(self, speed):
         
@@ -62,6 +65,7 @@ class MotorDriver4Channel():
         
         for i in range(4):
             self.set_motor(i, speed)
+
 
 ##########  I2C UTILITY  ########################################
     def _write(self, register, data):
@@ -74,3 +78,4 @@ class MotorDriver4Channel():
         result = self._i2c.readfrom(self._addr, bytes)
         return result[0]
 
+     
