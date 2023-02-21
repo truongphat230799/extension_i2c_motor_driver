@@ -3,26 +3,26 @@ Blockly.Blocks['i2c_motor_driver'] = {
       this.jsonInit(
         {
             "type": "i2c_motor_driver",
-            "message0": "quay động cơ %1 tốc độ %2 (từ -100 đến 100)",
+            "message0": "quay động cơ %1 tốc độ %2 (-100 đến 100)",
             "args0": [
               {
                 "type": "field_dropdown",
                 "name": "motor",
                 "options": [
                   [
-                    "1",
+                    "M1",
                     "0"
                   ],
                   [
-                    "2",
+                    "M2",
                     "1"
                   ],
                   [
-                    "3",
+                    "M3",
                     "2"
                   ],
                   [
-                    "4",
+                    "M4",
                     "3"
                   ]
                 ]
@@ -58,27 +58,6 @@ Blockly.Blocks['i2c_motor_driver'] = {
         return code;
 };
 
-Blockly.Blocks['i2c_motor_stop'] = {
-  init: function () {
-    this.jsonInit(
-      {
-        "type": "i2c_motor_stop",
-        "message0": "dừng di chuyển",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": "#cb2026",
-        "tooltip": "",
-        "helpUrl": ""
-      }
-    );
-  }
-};
-Blockly.Python['i2c_motor_stop'] = function(block) {
-  // TODO: Assemble Python into code variable.
-  var code = 'driver.set_motors(0)';
-  return code;
-};
-
 Blockly.Blocks['i2c_motor_delay'] = {
   init: function () {
     this.jsonInit(
@@ -91,19 +70,19 @@ Blockly.Blocks['i2c_motor_delay'] = {
             "name": "direction",
             "options": [
               [
-                "1",
+                "M1",
                 "0"
               ],
               [
-                "2",
+                "M2",
                 "1"
               ],
               [
-                "3",
+                "M3",
                 "2"
               ],
               [
-                "4",
+                "M4",
                 "3"
               ]
             ]
@@ -151,7 +130,7 @@ Blockly.Blocks['i2c_move_motor'] = {
     this.jsonInit(
       {
         "type": "i2c_move_motor",
-        "message0": "quay động cơ 1 tốc độ %1 động cơ 2 %2 động cơ 3 %3 động cơ 4 %4 (-100 đến 100)",
+        "message0": "quay động cơ M1 tốc độ %1 M2 %2 M3 %3 M4 %4 (-100 đến 100)",
         "args0": [
           {
             "type": "input_value",
