@@ -125,7 +125,7 @@ Blockly.Blocks['i2c_motor_delay'] = {
         "inputsInline": true,
         "previousStatement": null,
         "nextStatement": null,
-        "colour": ColorBlock,
+        "colour": "#cb2026",
         "tooltip": "",
         "helpUrl": ""
       }
@@ -177,7 +177,7 @@ Blockly.Blocks['i2c_move_motor'] = {
         "inputsInline": true,
         "previousStatement": null,
         "nextStatement": null,
-        "colour": ColorBlock,
+        "colour": "#cb2026",
         "tooltip": "",
         "helpUrl": ""
       }
