@@ -67,7 +67,7 @@ Blockly.Blocks['i2c_motor_delay'] = {
         "args0": [
           {
             "type": "field_dropdown",
-            "name": "direction",
+            "name": "motor",
             "options": [
               [
                 "M1",
