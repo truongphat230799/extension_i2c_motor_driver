@@ -37,7 +37,7 @@ class MotorDriver4Channel():
 
 ######## MOTOR CONTROL ##################################
 
-    def set_motor(self, motor, speed, time =None):
+    def set_motor(self, motor, speed, t = None):
         if motor not in (0, 1, 2, 3):
             raise RuntimeError('Invalid motor number')
         
@@ -52,7 +52,7 @@ class MotorDriver4Channel():
             dir = 1
 
         self._write(MD4C_REG_CH1+motor, pack('BB', dir, speed))
-        if time != None:
+        if t != None:
             time.sleep(t)
             self.set_motors(motor,0)
     
