@@ -169,10 +169,10 @@ Blockly.Python["i2c_move_motor"] = function (block) {
   Blockly.Python.definitions_['import_machine'] = 'import machine';
   Blockly.Python.definitions_['import_motor_driver'] = 'from i2c_motor_driver import MotorDriver4Channel';
   Blockly.Python.definitions_['create_motor_driver'] = 'driver = MotorDriver4Channel(machine.SoftI2C(sda=Pin(21),scl=Pin(22),freq=100000))\n';
-  var motor1 = Blockly.Python.valueToCode(block, 'left_wheel_speed', Blockly.Python.ORDER_ATOMIC);
-  var motor2 = Blockly.Python.valueToCode(block, 'right_wheel_speed', Blockly.Python.ORDER_ATOMIC);
-  var motor3 = Blockly.Python.valueToCode(block, 'left_wheel_speed', Blockly.Python.ORDER_ATOMIC);
-  var motor4 = Blockly.Python.valueToCode(block, 'right_wheel_speed', Blockly.Python.ORDER_ATOMIC);
+  var motor1 = Blockly.Python.valueToCode(block, 'motor1', Blockly.Python.ORDER_ATOMIC);
+  var motor2 = Blockly.Python.valueToCode(block, 'motor2', Blockly.Python.ORDER_ATOMIC);
+  var motor3 = Blockly.Python.valueToCode(block, 'motor3', Blockly.Python.ORDER_ATOMIC);
+  var motor4 = Blockly.Python.valueToCode(block, 'motor4', Blockly.Python.ORDER_ATOMIC);
   // TODO: Assemble Python into code variable.
   var code = 'driver.set_motor(0,'+ motor1+ ')\n' + 'driver.set_motor(1,'+ motor2+ ')\n'+ 'driver.set_motor(2,'+ motor3+ ')\n'+ 'driver.set_motor(3,'+ motor4+ ')\n';
   return code;
