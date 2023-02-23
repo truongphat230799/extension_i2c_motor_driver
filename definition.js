@@ -50,7 +50,7 @@ Blockly.Blocks['i2c_motor_driver'] = {
         Blockly.Python.definitions_['import_display'] = 'from yolobit import *';
         Blockly.Python.definitions_['import_machine'] = 'import machine';
         Blockly.Python.definitions_['import_motor_driver'] = 'from i2c_motor_driver import MotorDriver4Channel';
-        Blockly.Python.definitions_['create_motor_driver'] = 'driver = MotorDriver4Channel(machine.SoftI2C(sda=Pin(21),scl=Pin(22),freq=400000))\n';
+        Blockly.Python.definitions_['create_motor_driver'] = 'driver = MotorDriver4Channel(machine.SoftI2C(sda=Pin(21),scl=Pin(22),freq=100000))\n';
         var dropdown_motor = block.getFieldValue('motor');
         var speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
         // TODO: Assemble Python into code variable.
@@ -116,7 +116,7 @@ Blockly.Python["i2c_motor_delay"] = function (block) {
   Blockly.Python.definitions_['import_display'] = 'from yolobit import *';
   Blockly.Python.definitions_['import_machine'] = 'import machine';
   Blockly.Python.definitions_['import_motor_driver'] = 'from i2c_motor_driver import MotorDriver4Channel';
-  Blockly.Python.definitions_['create_motor_driver'] = 'driver = MotorDriver4Channel(machine.SoftI2C(sda=Pin(21),scl=Pin(22),freq=400000))\n';
+  Blockly.Python.definitions_['create_motor_driver'] = 'driver = MotorDriver4Channel(machine.SoftI2C(sda=Pin(21),scl=Pin(22),freq=100000))\n';
   var motor = block.getFieldValue('motor');
   var speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
   var time = Blockly.Python.valueToCode(block, 'time', Blockly.Python.ORDER_ATOMIC);
@@ -168,7 +168,7 @@ Blockly.Python["i2c_move_motor"] = function (block) {
   Blockly.Python.definitions_['import_display'] = 'from yolobit import *';
   Blockly.Python.definitions_['import_machine'] = 'import machine';
   Blockly.Python.definitions_['import_motor_driver'] = 'from i2c_motor_driver import MotorDriver4Channel';
-  Blockly.Python.definitions_['create_motor_driver'] = 'driver = MotorDriver4Channel(machine.SoftI2C(sda=Pin(21),scl=Pin(22),freq=400000))\n';
+  Blockly.Python.definitions_['create_motor_driver'] = 'driver = MotorDriver4Channel(machine.SoftI2C(sda=Pin(21),scl=Pin(22),freq=100000))\n';
   var motor1 = Blockly.Python.valueToCode(block, 'left_wheel_speed', Blockly.Python.ORDER_ATOMIC);
   var motor2 = Blockly.Python.valueToCode(block, 'right_wheel_speed', Blockly.Python.ORDER_ATOMIC);
   var motor3 = Blockly.Python.valueToCode(block, 'left_wheel_speed', Blockly.Python.ORDER_ATOMIC);
