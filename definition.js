@@ -121,7 +121,7 @@ Blockly.Python["i2c_motor_delay"] = function (block) {
   var speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
   var time = Blockly.Python.valueToCode(block, 'time', Blockly.Python.ORDER_ATOMIC);
   // TODO: Assemble Python into code variable.
-  var code = 'driver.set_motor(' + motor + ',' + speed + ", " + time + ')\n';
+  var code = 'driver.set_motor_time(' + motor + ',' + speed + ", " + time + ')\n';
   return code;
 };
 
