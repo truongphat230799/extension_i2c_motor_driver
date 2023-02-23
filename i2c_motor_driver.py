@@ -1,4 +1,4 @@
-from machine import *
+import machine
 from time import sleep
 from struct import pack, unpack
 
@@ -48,10 +48,12 @@ class MotorDriver4Channel():
         
         if speed < 0:
             dir = 0
+            speed = - speed
         else:
             dir = 1
-
+        #data_test = [\x00, \x00, \x60]
         self._write(MD4C_REG_CH1+motor, pack('BB', dir, speed))
+        #self._write(MD4C_REG_CH1+motor, data_test)
         if t != None:
             sleep(t)
             self.set_motor(motor,0)
@@ -66,7 +68,6 @@ class MotorDriver4Channel():
         for i in range(4):
             self.set_motor(i, speed)
 
-
 ##########  I2C UTILITY  ########################################
     def _write(self, register, data):
         # Write 1 byte of data to the specified  register address.
@@ -77,5 +78,3 @@ class MotorDriver4Channel():
         self._i2c.writeto(self._addr, bytes([register]))
         result = self._i2c.readfrom(self._addr, bytes)
         return result[0]
-
-     
